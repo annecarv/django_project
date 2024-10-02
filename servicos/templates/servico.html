@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'head' %}
+    <link rel="stylesheet" href="{% static 'clientes/css/clientes.css' %}">
+    <link rel="stylesheet" href="{% static 'servicos/css/listar_servicos.css' %}">
+{% endblock %}
+
+{% block  'dashboard' %}
+    <br>
+    <br>
+    <div class="container">
+        <button type="button" class="btn btn-primary" onclick="window.location.href='{% url 'gerar_os' servico.protocolo %}'">GERAR ORDEM DE SERVIÇO</button>
+    </div>
+{% endblock %}
